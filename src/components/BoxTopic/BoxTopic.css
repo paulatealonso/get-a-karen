@@ -1,0 +1,32 @@
+.topics-box {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(white, rgb(231, 231, 231));
+    padding: 20px 15px;
+    border-radius: 8px;
+}
+
+.topics-box:hover {
+    width: 303px;
+}
+
+#topic-link {
+    border-bottom: 1px solid #ffbadb;
+    width: 50px;
+}
+
+#topic-title h5:hover {
+    cursor: pointer;
+    font-size: 21px;
+}
+
+#topic-link a{
+    font-size: 14px;
+}
+
+
+#topic-link a:hover{
+    font-size: 15px;
+}
