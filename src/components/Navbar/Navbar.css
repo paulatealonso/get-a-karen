@@ -1,0 +1,86 @@
+.nav {
+    position: fixed;
+    z-index: 2;
+    top: 0px;
+    padding-left: 75px;
+    background-color: white;
+    width: 100%;
+}
+
+
+.nav-bar {
+    display: flex;
+    padding: 10px 10px 10px 30px;
+    justify-content: center;
+}
+
+.navbar-list {
+    display: flex;
+    list-style: none;
+    width: 1000px;
+    justify-content: space-evenly;
+    font-size: 17px;
+    font-weight: 400;
+    margin-top: 30px;
+}
+
+.navbar-list li {
+    padding: 5px 15px;
+}
+
+.navbar-list li:hover {
+    background-color: rgb(226, 226, 226);
+    font-size: 17.5px;
+    cursor:pointer;
+}
+
+.navbar-list a {
+    text-decoration: none;
+    color: black;
+}
+
+#logo {
+    width: 120%;
+}
+
+#show-nav {
+    display: block;
+    position: absolute;
+    left: 503px;
+    top: 70px;
+    padding: 5px 10px 10px 15px;
+    border: 1px solid rgb(179, 179, 179);
+    background-color: rgb(226, 226, 226);
+}
+
+#show-nav li {
+    list-style: none;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    width: 150px;
+}
+
+#show-nav li:hover {
+    font-size: 16.5px;
+}
+
+#show-navbar {
+    display: block;
+    position: absolute;
+    left: 705px;
+    top: 70px;
+    padding: 15px 10px 10px 15px;
+    border: 1px solid rgb(179, 179, 179);
+    background-color: rgb(226, 226, 226);
+}
+
+#show-navbar li {
+    list-style: none;
+    padding-bottom: 10px;
+    padding-top: 15px;
+    width: 200px;
+}
+
+#show-navbar li:hover {
+    font-size: 16.5px;
+}

@@ -1,0 +1,22 @@
+.img-cat-box {
+    width: 25%;
+    margin: 80px 20px 20px 20px;
+}
+
+.img-cat-box img {
+    width: 100%;
+    border: 20px solid white;
+    box-shadow: 5px 5px 10px;
+}
+
+.img-cat-box h4 {
+    color: white;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 22px;
+    transition: font-size 0.2s;
+}
+
+.img-cat-box h4:hover {
+    font-size: 23px;
+}

@@ -1,0 +1,89 @@
+#slider-container {
+    overflow: hidden;
+    margin: 30px 0;
+}
+
+.slider-wrapper {
+    padding: 20px;
+    display: flex;
+    animation: slide 30s infinite linear;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-200%);
+    }
+}
+
+#cats-carousel-link {
+    text-align: center;
+    margin: 20px 0 20px 0;
+}
+
+#cats-carousel-link a {
+    text-decoration: none;
+    color: #ffbadb;
+    font-weight: 500;
+}
+
+.cta {
+    position: relative;
+    margin: auto;
+    padding: 10px 18px 12px 18px;
+    transition: all 0.2s ease;
+    border: none;
+    background: none;
+}
+
+.cta:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    border-radius: 50px;
+    background: #ffbadb;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+}
+
+.cta span {
+    position: relative;
+    font-family: "Ubuntu", sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: black;
+}
+
+.cta svg {
+    position: relative;
+    top: 0;
+    margin-left: 15px;
+    margin-bottom: 5px;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke: black;
+    stroke-width: 2;
+    transform: translateX(-5px);
+    transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+    width: 100%;
+    background: #ffbadb;
+}
+
+.cta:hover svg {
+    transform: translateX(0);
+}
+
+.cta:active {
+    transform: scale(0.95);
+}
