@@ -6,6 +6,7 @@ import Cats from './pages/Cats';
 import Adopted from './pages/Adopted';
 import Contact from './pages/Contact';
 import { CatsContextProvider } from './context/CatsApi';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -20,6 +21,7 @@ function App() {
           <Route path='/adopted' element={<Adopted />} />
           <Route path='/contact' element={<Contact />} />
         </Routes>
+        <Footer/>
       </CatsContextProvider>
     </div>
   );

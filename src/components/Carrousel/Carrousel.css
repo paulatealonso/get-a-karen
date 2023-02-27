@@ -6,6 +6,7 @@
 .slider-wrapper {
     padding: 20px;
     display: flex;
+    width: 400px;
     animation: slide 30s infinite linear;
 }
 

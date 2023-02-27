@@ -1,0 +1,27 @@
+.footer {
+    background-color: #ffbadb;
+    display: flex;
+    padding: 100px 0; 
+    justify-content: center;
+}
+
+.rrss {
+    filter: invert(1);
+    width: 100px;
+    margin: 5px 15px;
+    cursor: pointer;
+}
+
+.rrss:hover {
+
+    width: 120px;
+   
+}
+
+.rrss img{
+    width: 70px;
+} 
+
+.rrss img:hover{
+    width: 90px;
+}

@@ -1,3 +1,7 @@
+import AdoptedSection from "../components/AdoptedSection/AdoptedSection"
+
+
+
 const Adopted = () => {
 
 
@@ -5,7 +9,7 @@ const Adopted = () => {
 
     return (
         <div>
-
+            <AdoptedSection/>
 
 
         </div>

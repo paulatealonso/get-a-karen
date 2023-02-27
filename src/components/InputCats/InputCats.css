@@ -1,0 +1,32 @@
+.box-labels-cats {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+}
+
+
+.inp-cats {
+    background-color: rgb(243, 243, 243);
+    border: 1px solid rgb(224, 225, 227);
+    width: 500px;
+    margin: 10px;
+    padding: 6px 5px 6px 10px;
+    border-radius: 500px;
+}
+
+.labels-cats {
+    margin-left: 20px;
+}
+
+.title-input-cat h2{
+    font-size: 55px;
+    font-weight: 700;
+}
+
+.title-input-cat h4{
+    font-weight: 400;
+}
+
+.title-input-cat {
+   margin: 20px 0;
+}
