@@ -1,0 +1,32 @@
+.protocol-conteiner {
+    padding: 30px 20px;
+}
+
+.protocol-conteiner h3{
+    padding-bottom: 40px;
+    padding-left: 20px;
+    font-weight: 400;
+}
+
+.protocol-adopt-conteiner {
+    display: flex;
+    background-color: #F5F5F5 ;
+    border-radius: 10px;
+    padding: 20px 0;
+    justify-content: space-evenly;
+    text-align: justify;
+}
+
+.protocol-adopt img {
+    width: 7%;
+}
+
+.protocol-adopt  {
+    width: 30%;
+}
+
+.li-protocol {
+    font-size: 17px;
+    font-weight: 500;
+    padding: 15px 0;
+}

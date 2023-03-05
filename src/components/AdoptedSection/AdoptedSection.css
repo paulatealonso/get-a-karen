@@ -1,0 +1,11 @@
+.adopted-card {
+    width: 10%;
+}
+
+.adopted-card img {
+    width: 100%;
+    object-fit: cover;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+}

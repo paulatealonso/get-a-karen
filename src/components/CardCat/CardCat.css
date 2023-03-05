@@ -9,6 +9,12 @@
     margin: 10px;
 }
 
+.card-info-cats h4 {
+    font-weight: 300;
+    font-size: 15px;
+    text-align: center;
+}
+
 .card-cat:hover {
     background-color: #eae7ed;
 }

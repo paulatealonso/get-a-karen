@@ -15,7 +15,7 @@ const CardCat = ({ name, img, description, location, id }) => {
             </div>
 
             <div className="card-info-cats">
-                <h3>{location}</h3>
+                <h4>{location}</h4>
                 <p>{description}</p>
             </div>
 

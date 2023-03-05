@@ -9,7 +9,9 @@ const Adopted = () => {
 
     return (
         <div>
-            <AdoptedSection/>
+            <AdoptedSection
+            
+            />
 
 
         </div>

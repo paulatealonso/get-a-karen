@@ -21,7 +21,7 @@ const Navbar = () => {
         <div className='nav'>
             <div className='nav-bar'>
                 <div>
-                <Link to={'/'} ><img src={logo} alt='logo' id='logo' /></Link>
+                    <Link to={'/'} ><img src={logo} alt='logo' id='logo' /></Link>
                 </div>
 
                 <div>
@@ -30,7 +30,7 @@ const Navbar = () => {
                         <li onMouseOver={() => toggleShowList()}>Nuestros michis</li>
 
                         <li onMouseOver={() => toggleShow()}> Colabora</li>
-                        <li><Link to={'/'} >Descubrir</Link></li>
+                        <li><Link to={'/discover'} >Descubrir</Link></li>
                         <li><Link to={'/contact'} >Contacto</Link></li>
                         <li><Link to={'/'} >Acerca de</Link></li>
 
@@ -39,17 +39,18 @@ const Navbar = () => {
 
             </div>
             {showList && <div id='show-nav'>
-               
-                    <li style={{borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px'}}><Link to={'/cats'} style= {{textDecoration: 'none', color: 'black'}}>Gatos</Link></li>
-                    <li><Link to={'/adopted'} style= {{textDecoration: 'none', color: 'black'}}>En familia</Link></li>
-               
+
+                <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/cats'} style={{ textDecoration: 'none', color: 'black' }}>Gatos</Link></li>
+                <li><Link to={'/adopted'} style={{ textDecoration: 'none', color: 'black' }}>En familia</Link></li>
+
             </div>}
 
             {showLines && <div id='show-navbar'>
-                    <li style={{borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px'}}><Link to={'/'} style= {{textDecoration: 'none', color: 'black'}}>Apadrina</Link></li>
-                    <li style={{borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px'}}><Link to={'/'} style= {{textDecoration: 'none', color: 'black'}}>Casas de acogida</Link></li>
-                    <li style={{borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px'}}><Link to={'/'} style= {{textDecoration: 'none', color: 'black'}}>Hazte socio</Link></li>
-                    <li><Link to={'/'} style= {{textDecoration: 'none', color: 'black'}}>Donación</Link></li>
+                <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/adoptpage'} style={{ textDecoration: 'none', color: 'black' }}>Adopta</Link></li>
+                <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/sponsor'} style={{ textDecoration: 'none', color: 'black' }}>Apadrina</Link></li>
+                <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>Casas de acogida</Link></li>
+                <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>Hazte socio</Link></li>
+                <li><Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>Donación</Link></li>
             </div>}
 
         </div>

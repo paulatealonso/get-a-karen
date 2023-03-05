@@ -8,15 +8,20 @@ const InputCats = () => {
 
     const { cats } = useContext(CatsApi);
     const [search, setSearch] = useState('');
+    // const [searchCity, setSearchCity] = useState('');
 
 
     const handleChange = (event) => {
         setSearch(event.target.value);
     };
 
+    // const handleChangeCity = (event) => {
+    //     setSearchCity(event.target.value);
+    // };
+
     const catsFiltered = cats.filter((cat) => {
 
-        if (cat.name.toUpperCase().includes(search.toUpperCase())) {
+        if (cat.name.toUpperCase().includes(search.toUpperCase()) ) {
             return true;
         }
         return false;
@@ -51,7 +56,7 @@ const InputCats = () => {
                             key={index}
                             name={cat.name}
                             id={cat.id}
-                            location={cat.location}
+                            location={cat.city}
                             description={cat.description}
                             img={cat.img}
                         />

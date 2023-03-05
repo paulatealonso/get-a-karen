@@ -1,7 +1,9 @@
 header {
     z-index: 1;
     position: absolute;
-    left: 430px;
+    display: flex;
+    flex-direction: column;   
+    left: 32%;
     top: 450px;
     opacity: 0;
     transform: translateY(100%);

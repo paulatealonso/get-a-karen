@@ -1,0 +1,39 @@
+.form-adopt {
+    background-color: white;
+    width: 800px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+}
+
+.form-adopt-conteiner {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0 40px 0;
+}
+
+.cat-for-adopt {
+    width: 470px;
+    height: 34px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    margin-bottom: 24px;
+    padding-left: 10px;
+}
+
+.btn-form-adopt {
+    background: #ffbadb;
+    border-radius: 4px;
+    border: none;
+    color: white;
+    width: 90px;
+    height: 40px;
+}
+
+.btn-form-adopt:hover {
+    background: #fac6df;
+}
+
