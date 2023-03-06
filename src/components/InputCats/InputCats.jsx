@@ -8,28 +8,34 @@ const InputCats = () => {
 
     const { cats } = useContext(CatsApi);
     const [search, setSearch] = useState('');
-    // const [searchCity, setSearchCity] = useState('');
+    const [citySearch, setCitySearch] = useState('');
+
 
 
     const handleChange = (event) => {
         setSearch(event.target.value);
     };
 
-    // const handleChangeCity = (event) => {
-    //     setSearchCity(event.target.value);
-    // };
+    const handleCityChange = (event) => {
+        setCitySearch(event.target.value);
+    };
+
 
     const catsFiltered = cats.filter((cat) => {
 
-        if (cat.name.toUpperCase().includes(search.toUpperCase()) ) {
-            return true;
-        }
-        return false;
+        const nameMatch = cat.name.toUpperCase().includes(search.toUpperCase());
+        const cityMatch = cat.city.toUpperCase().includes(citySearch.toUpperCase());
+        return nameMatch && cityMatch;
+
+        // if (cat.name.toUpperCase().includes(search.toUpperCase())) {
+        //     return true;
+        // }
+        // return false;
 
     });
 
     return (
-        <div style={{margin: '60px 0'}}>
+        <div style={{ margin: '60px 0' }}>
 
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }} className="title-input-cat">
                 <h2>Encuentra a tu michi</h2>
@@ -43,7 +49,7 @@ const InputCats = () => {
 
                     <div className="box-labels-cats">
                         <label className="labels-cats">Ubicación</label>
-                        <input type='text' className="inp-cats" placeholder="Madrid"/>
+                        <input type='text' className="inp-cats" value={citySearch} onChange={handleCityChange} placeholder="Madrid" />
                     </div>
                 </div>
             </div>

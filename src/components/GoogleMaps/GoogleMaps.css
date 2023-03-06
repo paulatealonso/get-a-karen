@@ -1,0 +1,58 @@
+.autocomplete-items {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    text-align: center;
+    text-justify: inter-word;
+    background-color: rgba(255, 255, 255, 0.8); 
+    border: 1px solid #ebebeb;
+    border-radius: 0 0 5px 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 100%;
+    z-index: 99;
+}
+
+.autocomplete-item {
+    cursor: pointer;
+    padding: 10px;
+}
+
+.autocomplete-item.active,
+.autocomplete-item:hover {
+    background-color: #ebebeb;
+}
+
+.list-shelters {
+    width: 500px;
+    position: relative;
+    left: 32%;
+    list-style: none;
+    padding: 10px;
+    background: rgb(237, 237, 237);
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.list-shelters li {
+    margin: 10px;
+    text-align: center;
+    text-justify: inter-word;
+}
+
+
+.list-shelters a {
+    text-decoration: none;
+    color: #ffbadb;
+    font-weight: 500;
+}
+
+.list-shelters a:hover {
+    font-size: 17.5px;
+    color: white;
+}
+
+#tit-list-shelters {
+    margin: 40px 0 20px 0;
+    color: #ffbadb;
+    font-weight: 400;
+}

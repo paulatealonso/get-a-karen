@@ -48,7 +48,7 @@ const Navbar = () => {
             {showLines && <div id='show-navbar'>
                 <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/adoptpage'} style={{ textDecoration: 'none', color: 'black' }}>Adopta</Link></li>
                 <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/sponsor'} style={{ textDecoration: 'none', color: 'black' }}>Apadrina</Link></li>
-                <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>Casas de acogida</Link></li>
+                <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/shelter'} style={{ textDecoration: 'none', color: 'black' }}>Casas de acogida</Link></li>
                 <li style={{ borderBottom: '1px solid rgb(179, 179, 179)', paddingBottom: '15px' }}><Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>Hazte socio</Link></li>
                 <li><Link to={'/'} style={{ textDecoration: 'none', color: 'black' }}>Donación</Link></li>
             </div>}

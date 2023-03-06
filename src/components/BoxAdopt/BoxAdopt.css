@@ -10,6 +10,11 @@
     margin-left: 40px;
 }
 
+.sponsor-conteiner a {
+    text-decoration: none;
+    color: #ffbadb;
+}
+
 .sponsor-conteiner button {
     display: flex;
     margin-left: 1100px;

@@ -11,6 +11,9 @@ import Sponsor from './pages/Sponsor';
 import AdoptPage from './pages/AdoptPage';
 import { AdoptedContextProvider } from './context/AdoptedApi';
 import Discover from './pages/Discover';
+import ShelterHomes from './pages/ShelterHomes';
+import PaymentShelter from './pages/PaymentShelter';
+import CatPage from './pages/CatPage';
 
 
 
@@ -28,6 +31,9 @@ function App() {
             <Route path='/sponsor' element={<Sponsor />} />
             <Route path='/adoptpage' element={<AdoptPage />} />
             <Route path='/discover' element={<Discover />} />
+            <Route path='/shelter' element={<ShelterHomes />} />
+            <Route path='/payment' element={<PaymentShelter />} />
+            <Route path='/cat/:name' element={<CatPage />} />
           </Routes>
           <Footer />
         </AdoptedContextProvider>

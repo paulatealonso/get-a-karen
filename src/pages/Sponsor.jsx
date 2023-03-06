@@ -13,6 +13,7 @@ const Sponsor = () => {
             <BoxAdopt
                 title={'Ayúdanos apadrinando'}
                 img={pepisMonos}
+                link = '/payment'
                 button={'Apadrina'}
                 text={'Liberados de una bolsa, de un motor de coche, emparedados, tabicados, lanzados desde una ventanilla, escondidos en alcantarillas, arrojados en cubos de basura…, nuestros gatos salen de situaciones terroríficas, del abandono, víctimas  de la crueldad o de la indiferencia humana.'}
                 text2={'Uno de nuestros objetivos principales es buscar, gestionar y facilitar su vida en bienestar y respeto. Intentamos conseguir para ellos humanos que compartan su hogar, donde puedan vivir con tranquilidad el resto de sus vidas. Lamentablemente y a pesar de nuestros esfuerzos siempre tenemos en nuestras casas de acogida más animales que adoptantes, animales a los que hay que atender y cuidar.'}

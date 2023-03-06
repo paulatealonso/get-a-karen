@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import './CardCat.css'
 
-const CardCat = ({ name, img, description, location, id }) => {
+const CardCat = ({ name, img, description, location}) => {
 
 
 
@@ -11,7 +11,7 @@ const CardCat = ({ name, img, description, location, id }) => {
         <div className="card-cat">
             <img src={img} alt={name} />
             <div className="card-name">
-            <Link to={'/Cats'}><h4>{name.toUpperCase()}</h4></Link>
+            <Link to={`/cat/${name}`}><h4>{name.toUpperCase()}</h4></Link>
             </div>
 
             <div className="card-info-cats">
@@ -20,7 +20,7 @@ const CardCat = ({ name, img, description, location, id }) => {
             </div>
 
             <div className="card-link">
-                <Link to={'/Cats'}>VER A {name.toUpperCase()}</Link>
+                <Link to={`/cat/${name}`}>VER A {name.toUpperCase()}</Link>
             </div>
 
 
