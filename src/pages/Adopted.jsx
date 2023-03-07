@@ -1,4 +1,5 @@
-import AdoptedSection from "../components/AdoptedSection/AdoptedSection"
+import AdoptBase from "../components/AdoptBase/AdoptBase"
+
 
 
 
@@ -9,9 +10,8 @@ const Adopted = () => {
 
     return (
         <div>
-            <AdoptedSection
             
-            />
+            <AdoptBase/>
 
 
         </div>

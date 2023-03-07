@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from 'firebase/firestore';
 
+
 const firebaseConfig = {
     apiKey: "AIzaSyDdfcYsanLyrniB1GFqwsaka40Nqik68o0",
     authDomain: "get-a-karen-1ca81.firebaseapp.com",
@@ -20,6 +21,8 @@ const db = getFirestore(app);
 
 
 const gatosCollection = collection(db, "adopted");
+
+
 
 getDocs(gatosCollection)
     .then((querySnapshot) => {

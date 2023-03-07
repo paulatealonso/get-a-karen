@@ -1,6 +1,12 @@
 import { useState } from "react";
 import Button from "../Button/Button";
 import './AdoptForm.css'
+import emailjs from 'emailjs-com';
+
+
+const USER_ID = 'tTLYESeJhE17W82or';
+const TEMPLATE_ID = 'template_rxkow2a';
+const SERVICE_ID = 'service_c2afk6p';
 
 
 const AdoptForm = () => {
@@ -62,7 +68,7 @@ const AdoptForm = () => {
             phoneError = 'Number phone is required';
         }
 
-        if (nameError || nameKarenError ||emailError || messageError || phoneError) {
+        if (nameError || nameKarenError || emailError || messageError || phoneError) {
             setErrors({ name: nameError, nameKaren: nameKarenError, email: emailError, message: messageError, phone: phoneError });
             return false;
         }
@@ -73,74 +79,92 @@ const AdoptForm = () => {
     const handleSubmit = (event) => {
         event.preventDefault();
 
-        const isValid = validate();
-        if (isValid) {
-            console.log(formData);
-            setFormData({ name: '', nameKaren: '', email: '', message: '', phone: '' });
-        }
+        // if (!validate()) {
+        //     return;
+        // }
+
+        emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
+            .then((response) => {
+                alert('Correo enviado correctamente')
+                setFormData({
+                    name: '',
+                    nameKaren: '',
+                    email: '',
+                    phone: '',
+                    message: '',
+                });
+                setErrors({
+                    name: '',
+                    nameKaren: '',
+                    email: '',
+                    phone: '',
+                    message: '',
+                });
+                alert('Your message has been sent.');
+            }, (error) => {
+                console.log('FAILED...', error);
+                alert('Sorry, there was an error sending your message. Please try again later.');
+            });
     };
-
-
-
 
 
     return (
         <div className="form-adopt-conteiner">
             <form onSubmit={handleSubmit} className="form-adopt">
-            <div>
-                <label>Nombre del gatito</label>
-                <br/>
-                <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className='cat-for-adopt'
-                />
-                {errors.name && <div style={{ color: '#ffbadb' }}>{errors.name}</div>}
-            </div>
-            <div>
-                <label>Nombre</label>
-                <br/>
-                <input
-                    type="text"
-                    name="nameKaren"
-                    value={formData.nameKaren}
-                    onChange={handleChange}
-                    className='cat-for-adopt'
-                />
-                {errors.nameKaren && <div style={{ color: '#ffbadb' }}>{errors.nameKaren}</div>}
-            </div>
+                <div>
+                    <label>Nombre del gatito</label>
+                    <br />
+                    <input
+                        type="text"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleChange}
+                        className='cat-for-adopt'
+                    />
+                    {errors.name && <div style={{ color: '#ffbadb' }}>{errors.name}</div>}
+                </div>
+                <div>
+                    <label>Nombre</label>
+                    <br />
+                    <input
+                        type="text"
+                        name="nameKaren"
+                        value={formData.nameKaren}
+                        onChange={handleChange}
+                        className='cat-for-adopt'
+                    />
+                    {errors.nameKaren && <div style={{ color: '#ffbadb' }}>{errors.nameKaren}</div>}
+                </div>
 
-            <div>
-            <label>Email</label>
-                <br/>
-                <input
-                    type="text"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className='cat-for-adopt'
-                />
-                {errors.email && <div style={{ color: '#ffbadb' }}>{errors.email}</div>}
-            </div>
+                <div>
+                    <label>Email</label>
+                    <br />
+                    <input
+                        type="text"
+                        name="email"
+                        value={formData.email}
+                        onChange={handleChange}
+                        className='cat-for-adopt'
+                    />
+                    {errors.email && <div style={{ color: '#ffbadb' }}>{errors.email}</div>}
+                </div>
 
-            <div>
-            <label>Teléfono</label>
-                <br/>
-                <input
-                    type="text"
-                    name="phone"
-                    placeholder="+1 (555) 987-6543"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className='cat-for-adopt'
-                />
-                {errors.phone && <div style={{ color: '#ffbadb' }}>{errors.phone}</div>}
-            </div>
+                <div>
+                    <label>Teléfono</label>
+                    <br />
+                    <input
+                        type="text"
+                        name="phone"
+                        placeholder="+1 (555) 987-6543"
+                        value={formData.phone}
+                        onChange={handleChange}
+                        className='cat-for-adopt'
+                    />
+                    {errors.phone && <div style={{ color: '#ffbadb' }}>{errors.phone}</div>}
+                </div>
 
-            <Button type='submit' className={'btn-form-adopt'} text= {'ENVIAR'}/>
-        </form>
+                <Button type='submit' className={'btn-form-adopt'} text={'ENVIAR'} />
+            </form>
 
 
         </div>
