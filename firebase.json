@@ -1,0 +1,11 @@
+{
+  "database": {
+    "rules": "later"
+  },
+  "hosting": {
+    "site": "get-a-karen",
+    "public": "public"
+  }
+}
+
+

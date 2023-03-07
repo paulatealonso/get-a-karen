@@ -1,0 +1,32 @@
+.base-img {
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    white-space: nowrap;
+}
+
+.base-img-slider {
+    display: inline-block;
+    width: 100%;
+    scroll-snap-align: start;
+}
+
+.adopted-card {
+    width: 100%;
+    display: block;
+}
+
+.adopted-card img {
+    height: 500px;
+    width: 400px;
+    object-fit: cover;
+}
+
+.adopted-card video {
+    height: 500px;
+    width: 400px;
+}
+
+.base-img {
+    display: flex;
+}

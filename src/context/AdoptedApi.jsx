@@ -12,7 +12,7 @@ const AdoptedContextProvider = ({ children }) => {
         axios
             .get(URL).then((response) => {
                 let allAdopted = response.data.adopted
-                console.log(allAdopted)
+                // console.log(allAdopted)
                 setAdopted(allAdopted)
             })
     },[])
