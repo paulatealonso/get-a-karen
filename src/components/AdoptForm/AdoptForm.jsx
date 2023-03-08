@@ -88,7 +88,7 @@ const AdoptForm = () => {
         emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
             .then((response) => {
                 Swal.fire({
-                    title: 'Custom width, padding, color, background.',
+                    title: 'ENVIADO CORRECTAMENTE',
                     width: 600,
                     padding: '3em',
                     color: '#716add',

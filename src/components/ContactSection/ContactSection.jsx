@@ -88,7 +88,7 @@ const ContactSection = () => {
                 <div className="card-contact-last">¿QUIERES HACER UNA DONACIÓN?</div>
             </div>
 
-            <div style={{display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '60px 0 40px 0'}}>
+            <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', margin: '60px 0 40px 0' }}>
                 <form onSubmit={handleSubmit} className="form-adopt">
                     <div>
                         <label>Nombre</label>
