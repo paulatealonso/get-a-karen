@@ -1,3 +1,5 @@
+import ContactSection from "../components/ContactSection/ContactSection"
+
 const Contact = () => {
 
 
@@ -5,7 +7,7 @@ const Contact = () => {
 
     return (
         <div>
-
+            <ContactSection/>
 
         </div>
     )

@@ -1,0 +1,69 @@
+.card-contact-last {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    background: #ffbadb;
+    display: flex;
+    color: white;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.card-contact-last::before,
+.card-contact-last::after {
+    position: absolute;
+    content: "";
+    width: 20%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    background-color: #ffd7ea;
+    transition: all 0.5s;
+}
+
+.card-contact-last::before {
+    top: 0;
+    right: 0;
+    border-radius: 0 15px 0 100%;
+}
+
+.card-contact-last::after {
+    bottom: 0;
+    left: 0;
+    border-radius: 0 100% 0 15px;
+}
+
+.card-contact-last:hover::before,
+.card-contact-last:hover:after {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    transition: all 0.5s;
+}
+
+.card-contact-last:hover:after {
+    content: "ESCRÍBENOS!";
+}
+
+.container-contact-last {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cat-for-adopted {
+    width: 470px;
+    height: 234px;
+    border: 1px solid #D1D5DB;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    margin-bottom: 24px;
+    padding-left: 10px;
+}
