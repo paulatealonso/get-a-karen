@@ -2,6 +2,8 @@ import { useState } from "react";
 import Button from "../Button/Button";
 import './AdoptForm.css'
 import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+
 
 
 const USER_ID = 'tTLYESeJhE17W82or';
@@ -51,7 +53,7 @@ const AdoptForm = () => {
         }
 
         if (!formData.nameKaren) {
-            nameKarenError = 'Name is required';
+            nameKarenError = 'Name Karen is required';
         }
 
         if (!formData.email) {
@@ -80,12 +82,24 @@ const AdoptForm = () => {
         event.preventDefault();
 
         // if (!validate()) {
-        //     return;
+        //     return console.log('formData:', formData);;
         // }
 
         emailjs.send(SERVICE_ID, TEMPLATE_ID, formData, USER_ID)
             .then((response) => {
-                alert('Correo enviado correctamente')
+                Swal.fire({
+                    title: 'Custom width, padding, color, background.',
+                    width: 600,
+                    padding: '3em',
+                    color: '#716add',
+                    background: '#fff url(/images/trees.png)',
+                    backdrop: `
+                      rgba(0,0,123,0.4)
+                      url("https://res.cloudinary.com/dvfxffbqu/image/upload/v1678229285/cat-space_gxzsll.gif")
+                      left top
+                      no-repeat
+                    `
+                });
                 setFormData({
                     name: '',
                     nameKaren: '',
@@ -100,7 +114,6 @@ const AdoptForm = () => {
                     phone: '',
                     message: '',
                 });
-                alert('Your message has been sent.');
             }, (error) => {
                 console.log('FAILED...', error);
                 alert('Sorry, there was an error sending your message. Please try again later.');

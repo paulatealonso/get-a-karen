@@ -3,7 +3,7 @@ import boxes1 from '../assets/boxes.JPEG'
 import boxes2 from '../assets/boxes2.JPEG'
 import boxes3 from '../assets/boxes3.JPEG'
 import InfoCard from '../InfoCard/InfoCard'
-import Button from '../Button/Button'
+import { Link } from 'react-router-dom'
 
 
 
@@ -26,7 +26,7 @@ const MainSection = () => {
             <br />
             <br />
             <br />
-            <Button className={'btn-main-section'} text={'ADOPTA'} />
+            <button className={'btn-main-section'}><Link to={'/cats'}>ADOPTA</Link></button>
             <br />
             <br />
             <br />

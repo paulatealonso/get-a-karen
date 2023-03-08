@@ -1,0 +1,67 @@
+.catsTips-containter {
+    margin: 100px 10px;
+    display: column;
+}
+
+.catsTips-img-box img {
+    width: 40%;
+    position: absolute;
+    left: 27%;
+    margin: 40px 10px 0 0;
+    z-index: 1;
+}
+
+.catsTips-color-box {
+    width: 60%;
+    background-color: #ffbadb;
+    position: absolute;
+    left: 30%;
+    z-index: 0;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 30px 90px;
+}
+
+.catsTips-info-box {
+    color: white;
+    background-color: #525252;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    width: 450px;
+    padding: 20px;
+    position: absolute;
+    left: 6%;
+    margin: 700px 0 0 0;
+    z-index: 2;
+}
+
+.catsTips-info-box h4{
+    font-weight: 300;
+    font-size: 20px;
+    color: #ffbadb;
+}
+
+.catsTips-info-box h2{
+    font-weight: 500;
+    font-size: 52px;
+    font-family: 'Playfair Display', serif;
+    padding: 5px 0 10px 40px;
+}
+
+.catsTips-list-box {
+    background-color: rgb(251, 251, 251);
+    width: 750px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 40px;
+    padding: 20px 15px;
+    position: absolute;
+    left: 40%;
+    margin: 720px 0 0 0;
+    z-index: 2;
+}
+
+.catsTips-list-box h6 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
