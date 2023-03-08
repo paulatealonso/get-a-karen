@@ -22,8 +22,8 @@ const AdoptBase = () => {
 
 
     return (
-        <div style={{ margin: '200px 0' }}>
-            <h1>Gatos</h1>
+        <div style={{ margin: '200px 0'}} className= 'container-match'>
+            <h1 className="title-match">HICIERON MATCH CON SUS KAREN</h1>
             {adopted.map((cat, index) => {
                 const img = cat.img;
                 const videos = cat.video;
@@ -40,14 +40,17 @@ const AdoptBase = () => {
                                 );
                             })}
                         </div>
-                        <div key={index} className='adopted-card'>
+                        <div key={index} className='base-video'>
                             {videos ? (
                                 videos.map((video, videoIndex) => {
+                                    const videoClass = videos.length > 2 ? 'base-video-slider-optional' : 'base-video-slider';
                                     return (
-                                        <video key={videoIndex} width="100%" controls>
-                                            <source src={video} type="video/mp4" ></source>
-                                            Tu navegador no admite el elemento de video.
-                                        </video>
+                                        <div className={videoClass}>
+                                            <video key={videoIndex} width="100%" controls>
+                                                <source src={video} type="video/mp4" ></source>
+                                                Tu navegador no admite el elemento de video.
+                                            </video>
+                                        </div>
                                     );
                                 })
                             ) : (

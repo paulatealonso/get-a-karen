@@ -1,6 +1,12 @@
 import { useState } from "react";
 import './PaymentForm.css'
 import logoForm from '../assets/logo-form.png'
+import emailjs from 'emailjs-com';
+import Swal from 'sweetalert2';
+
+const USER_ID = 'tTLYESeJhE17W82or';
+const TEMPLATE_ID = 'template_2aen7l9';
+const SERVICE_ID = 'service_mpwwwmo';
 
 const PaymentForm = ({ title }) => {
     const [selectedMethod, setSelectedMethod] = useState(null);
@@ -103,6 +109,7 @@ const PaymentForm = ({ title }) => {
 
     const [formDataTwo, setFormDataTwo] = useState({
         name: '',
+        nameCat: '',
         lastName: '',
         phone: '',
         email: '',
@@ -136,6 +143,10 @@ const PaymentForm = ({ title }) => {
 
         if (formDataTwo.name.length < 2) {
             newErrors.name = 'El nombre no es válido';
+        }
+
+        if (!formDataTwo.nameCat) {
+            newErrors.nameCat = 'El nombre es obligatorio';
         }
 
         if (!formDataTwo.lastName) {
@@ -177,6 +188,50 @@ const PaymentForm = ({ title }) => {
             setErrorsTwo(newErrors);
             return;
         }
+
+        emailjs
+            .send(SERVICE_ID, TEMPLATE_ID, formDataTwo, USER_ID)
+            .then((response) => {
+                Swal.fire({
+                    title: 'Custom width, padding, color, background.',
+                    width: 600,
+                    padding: '3em',
+                    color: '#716add',
+                    background: '#fff url(/images/trees.png)',
+                    backdrop: `
+            rgba(0,0,123,0.4)
+            url("https://res.cloudinary.com/dvfxffbqu/image/upload/v1678229285/cat-space_gxzsll.gif")
+            left top
+            no-repeat
+          `
+                });
+                setFormDataTwo({
+                    name: '',
+                    nameCat: '',
+                    lastName: '',
+                    email: '',
+                    phone: '',
+                    poblation: '',
+                    postal: '',
+                    street: '',
+                    num: ''
+                });
+                setErrorsTwo({
+                    name: '',
+                    nameCat: '',
+                    lastName: '',
+                    email: '',
+                    phone: '',
+                    poblation: '',
+                    postal: '',
+                    street: '',
+                    num: ''
+                });
+            })
+            .catch((error) => {
+                console.log('FAILED...', error);
+                alert('Sorry, there was an error sending your message. Please try again later.');
+            });
 
     };
 
@@ -417,6 +472,18 @@ const PaymentForm = ({ title }) => {
 
             <form onChange={handleSubmitTwo}>
                 <div id="formName">
+                    <label htmlFor="nameCat">Nombre del gato:</label>
+                    <input
+                        type="text"
+                        id="nameCat"
+                        name="nameCat"
+                        value={formDataTwo.nameCat}
+                        onChange={handleInputChange}
+                    />
+                    {errorsTwo.nameCat && <div style={{ color: '#ffbadb' }}>{errorsTwo.nameCat}</div>}
+                </div>
+
+                <div id="formName">
                     <label htmlFor="name">Nombre:</label>
                     <input
                         type="text"
@@ -565,10 +632,10 @@ const PaymentForm = ({ title }) => {
                 </div>
 
             </form>
-            <br/>
+            <br />
             <button disabled={!selectedMethod} type="submit" className="btn-form-cat">Continuar</button>
             <div className="form-logo">
-                <img src={logoForm} alt=''/>
+                <img src={logoForm} alt='' />
             </div>
         </div>
     );

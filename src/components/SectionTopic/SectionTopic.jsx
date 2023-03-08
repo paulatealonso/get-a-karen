@@ -17,21 +17,21 @@ const SectionTopic = () => {
                 img={handshearth}
                 title={'Apadrina'}
                 text={'Si quieres tener un animal en tu vida pero actualmente no puedes disfrutarlo en casa, te ofrecemos la posibilidad de apadrinar uno.'}
-                page={'/Cats'}
+                page={'/cats'}
             />
 
             <BoxTopic
                 img={hearts}
                 title={'Michis que hicieron match'}
                 text={'Para todos aquellos karens que acogen a un gato para darle el amor y cuidado que tanto necesita.'}
-                page={'/Adopted'}
+                page={'/adopted'}
             />
 
             <BoxTopic
                 img={lupa}
                 title={'Descubre'}
                 text={'Sample text. Click to select the text box. Click again or double click to start editing the text.'}
-                page={'/Adopted'}
+                page={'/discover'}
             />
 
 
