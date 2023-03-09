@@ -97,10 +97,10 @@ const CatPage = () => {
                 </p>
             </div>
             <div style={{display: 'flex', justifyContent: 'space-between'}} className= 'info-api-btns'>
-                <button className='btn-form-cat' onClick={() => setShowForm(true)} >ADOPTAR</button>
+                <button className='btn-form-cat' onClick={() => setShowForm(true)} >ADOPTA</button>
                 <Link to={'/payment'} ><Button text={'APADRINA'} className='btn-form-cat'/></Link>
             </div>
-            {showForm ? <AdoptForm /> : null}
+            {showForm ? <AdoptForm name= {cat.name} /> : null}
 
 
         </div >

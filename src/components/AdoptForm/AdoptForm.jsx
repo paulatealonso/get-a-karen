@@ -11,10 +11,10 @@ const TEMPLATE_ID = 'template_rxkow2a';
 const SERVICE_ID = 'service_c2afk6p';
 
 
-const AdoptForm = () => {
+const AdoptForm = ({ name }) => {
 
     const [formData, setFormData] = useState({
-        name: '',
+        name: name || '',
         nameKaren: '',
         email: '',
         phone: '',
@@ -130,7 +130,7 @@ const AdoptForm = () => {
                     <input
                         type="text"
                         name="name"
-                        value={formData.name}
+                        value={formData.name || name}
                         onChange={handleChange}
                         className='cat-for-adopt'
                     />
