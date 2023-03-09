@@ -9,18 +9,26 @@ const defaultCenter = {
     lat: 40.4131401, lng: -3.706334
 }
 
+const options = [
+    { value: { lat: 40.4131401, lng: -3.706334 }, label: "Centro de Protección Animal de Madrid Salud" },
+    { value: { lat: 40.4080885, lng: -3.6993516 }, label: "La Gatoteca" },
+    { value: { lat: 40.4152524, lng: -3.7038304 }, label: "SOS Felinos Madrid" },
+    { value: { lat: 40.52528, lng: -3.816030 }, label: "La Madrileña Asociación Protectora de Animales" }
+];
+
 const GoogleMaps = () => {
 
     const [address, setAddress] = useState("");
     const [center, setCenter] = useState(defaultCenter);
     const [markerPosition, setMarkerPosition] = useState(null);
+    const [selectedOption, setSelectedOption] = useState(null);
+
 
     const mapStyles = {
         height: "100vh",
         width: "100%",
         border: '15px solid #ffbadb'
     };
-
 
 
     const handleSelect = async (value) => {
@@ -30,7 +38,14 @@ const GoogleMaps = () => {
         setAddress(value);
         setCenter(latLng);
         setMarkerPosition(latLng);
+    };
 
+    const handleChange = (event) => {
+        const value = event.target.value;
+        const option = options.find((o) => o.label === value);
+        setSelectedOption(option);
+        setCenter(option.value);
+        setMarkerPosition(option.value);
     };
 
     return (
@@ -46,6 +61,12 @@ const GoogleMaps = () => {
                     {({ getInputProps, suggestions, getSuggestionItemProps, loading }) => (
                         <div>
                             <input {...getInputProps({ placeholder: "Gatoteca..." })} style={{ border: '1px solid #ffbadb', width: '500px', borderRadius: '500px', backgroundColor: 'rgb(243, 243, 243)', padding: '6px 5px 6px 10px', margin: '10px 0 30px 0' }} />
+                            <select value={selectedOption?.label} onChange={handleChange} style={{ border: '1px solid #ffbadb', width: '500px', borderRadius: '500px', backgroundColor: 'rgb(243, 243, 243)', padding: '6px 5px 6px 10px', margin: '10px 0 30px 10px', color: 'gray' }}>
+                                <option value="">Selecciona un centro cercano</option>
+                                {options.map((option) => (
+                                    <option key={option.label} value={option.label}>{option.label}</option>
+                                ))}
+                            </select>
                             <div className="autocomplete-items">
 
 

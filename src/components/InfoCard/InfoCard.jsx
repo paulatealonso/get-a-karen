@@ -1,6 +1,7 @@
+import { Link } from 'react-router-dom'
 import './InfoCard.css'
 
-const InfoCard = ({img, title}) => {
+const InfoCard = ({img, title, link}) => {
 
 
 
@@ -9,7 +10,7 @@ const InfoCard = ({img, title}) => {
        
             <div className='img-cat-box'>
                 <img src={img} alt='' />
-                <h4>{title}</h4>
+                <Link to={link}><h4>{title}</h4></Link>
             </div>
             
     )

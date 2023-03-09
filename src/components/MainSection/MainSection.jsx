@@ -19,9 +19,9 @@ const MainSection = () => {
         <section className='main-section'>
 
             <div id='conteiner-main'>
-                <InfoCard title={'SOBRE ELLOS'} img={boxes1} />
-                <InfoCard title={'CUIDADOS GATUNOS'} img={boxes2} />
-                <InfoCard title={'TIPS GATUNOS'} img={boxes3} />
+                <InfoCard title={'SOBRE ELLOS'} img={boxes1} link = {'/discover'}/>
+                <InfoCard title={'CENTROS DE ADOPCIÓN'} img={boxes2} link = {'/shelter'}/>
+                <InfoCard title={'TIPS GATUNOS'} img={boxes3} link = {'/discover'}/>
             </div>
             <br />
             <br />

@@ -18,6 +18,7 @@ const AdoptPage = () => {
                 title={'CÓMO ADOPTAR'}
                 title2={'ANTES DE TOMAR LA DECISIÓN DE ADOPTAR, LEE ESTO'}
                 img={poAdorable}
+                link = {'/cats'}
                 button={'GATOS EN ADOPCIÓN'}
                 text={'Uno de nuestros objetivos principales es encontrar hogares donde nuestros gatos puedan vivir seguros y con tranquilidad el resto de sus vidas y por eso ponemos todo el esfuerzo necesario en elegir como adoptantes a personas responsables y conscientes de su decisión.'}
                 text2={'La adopción no debe responder a un impulso, tiene que ser un acto meditado, y por eso es conveniente que antes de hacerlo pienses en el compromiso que adquieres con el animal y que reflexiones sobre algunas cuestiones previas, de esta forma la adopción será más segura y evitaremos problemas futuros para todos.'}

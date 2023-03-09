@@ -56,7 +56,7 @@ const Header = () => {
 
             <header>
                 <h1>BE A KAREN</h1>
-                <Link to={'/'} style={{ textDecoration: 'none', color: 'white' }}><p>Conócelos</p></Link>
+                <Link to={'/cats'} style={{ textDecoration: 'none', color: 'white' }}><p>Conócelos</p></Link>
             </header>
         </div>
     )
