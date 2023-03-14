@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.a8652b21.css",
-    "main.js": "/static/js/main.bbf91652.js",
+    "main.js": "/static/js/main.b41c9502.js",
     "static/media/po-adorable.jpeg": "/static/media/po-adorable.ea80f0869844907c2448.jpeg",
     "static/media/pepa-dormida.PNG": "/static/media/pepa-dormida.92aabf7cbc6bf1138025.PNG",
     "static/media/boxes2.JPEG": "/static/media/boxes2.d0634654afc3fbd2e827.JPEG",
@@ -24,10 +24,10 @@
     "static/media/huella.png": "/static/media/huella.25e6d1fce701b0c75d46.png",
     "index.html": "/index.html",
     "main.a8652b21.css.map": "/static/css/main.a8652b21.css.map",
-    "main.bbf91652.js.map": "/static/js/main.bbf91652.js.map"
+    "main.b41c9502.js.map": "/static/js/main.b41c9502.js.map"
   },
   "entrypoints": [
     "static/css/main.a8652b21.css",
-    "static/js/main.bbf91652.js"
+    "static/js/main.b41c9502.js"
   ]
 }
