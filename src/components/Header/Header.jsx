@@ -3,7 +3,7 @@ import headerKitty from '../assets/header-2-img.jpeg'
 import cuties from '../assets/cuties.webp'
 import { Link } from 'react-router-dom'
 import './Header.css'
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useCallback } from 'react'
 
 
 const Header = () => {
@@ -13,16 +13,17 @@ const Header = () => {
         setActiveIndex(activeIndex === 0 ? 2 : activeIndex - 1);
     };
 
-    const handleNext = () => {
+    const handleNext = useCallback(() => {
         setActiveIndex(activeIndex === 2 ? 0 : activeIndex + 1);
-    };
+      }, [activeIndex]);
+      
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             handleNext();
         }, 5000); 
         return () => clearInterval(intervalId);
-    }, [activeIndex]);
+    }, [activeIndex, handleNext]);
 
 
     return (

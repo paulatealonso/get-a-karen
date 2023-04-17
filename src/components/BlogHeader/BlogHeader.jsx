@@ -2,7 +2,7 @@ import other2 from '../assets/other4.webp'
 import other1 from '../assets/othercat.webp'
 import other3 from '../assets/other-cat3.webp'
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState , useCallback} from 'react'
 
 
 const BlogHeader = () => {
@@ -12,16 +12,17 @@ const BlogHeader = () => {
         setActiveIndex(activeIndex === 0 ? 2 : activeIndex - 1);
     };
 
-    const handleNext = () => {
+    const handleNext = useCallback(() => {
         setActiveIndex(activeIndex === 2 ? 0 : activeIndex + 1);
-    };
+      }, [activeIndex]);
+      
 
     useEffect(() => {
         const intervalId = setInterval(() => {
             handleNext();
         }, 5000); 
         return () => clearInterval(intervalId);
-    }, [activeIndex]);
+    }, [activeIndex, handleNext]);
 
 
     return (

@@ -41,42 +41,42 @@ const AdoptForm = ({ name }) => {
         });
     };
 
-    const validate = () => {
-        let nameError = '';
-        let nameKarenError = '';
-        let emailError = '';
-        let phoneError = '';
-        let messageError = '';
+    // const validate = () => {
+    //     let nameError = '';
+    //     let nameKarenError = '';
+    //     let emailError = '';
+    //     let phoneError = '';
+    //     let messageError = '';
 
-        if (!formData.name) {
-            nameError = 'Name is required';
-        }
+    //     if (!formData.name) {
+    //         nameError = 'Name is required';
+    //     }
 
-        if (!formData.nameKaren) {
-            nameKarenError = 'Name Karen is required';
-        }
+    //     if (!formData.nameKaren) {
+    //         nameKarenError = 'Name Karen is required';
+    //     }
 
-        if (!formData.email) {
-            emailError = 'Email is required';
-        } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
-            emailError = 'Email is not valid';
-        }
+    //     if (!formData.email) {
+    //         emailError = 'Email is required';
+    //     } else if (!/\S+@\S+\.\S+/.test(formData.email)) {
+    //         emailError = 'Email is not valid';
+    //     }
 
-        if (!formData.message) {
-            messageError = 'Message is required';
-        }
+    //     if (!formData.message) {
+    //         messageError = 'Message is required';
+    //     }
 
-        if (!formData.phone) {
-            phoneError = 'Number phone is required';
-        }
+    //     if (!formData.phone) {
+    //         phoneError = 'Number phone is required';
+    //     }
 
-        if (nameError || nameKarenError || emailError || messageError || phoneError) {
-            setErrors({ name: nameError, nameKaren: nameKarenError, email: emailError, message: messageError, phone: phoneError });
-            return false;
-        }
+    //     if (nameError || nameKarenError || emailError || messageError || phoneError) {
+    //         setErrors({ name: nameError, nameKaren: nameKarenError, email: emailError, message: messageError, phone: phoneError });
+    //         return false;
+    //     }
 
-        return true;
-    };
+    //     return true;
+    // };
 
     const handleSubmit = (event) => {
         event.preventDefault();
